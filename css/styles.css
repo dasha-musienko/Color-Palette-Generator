@@ -9,7 +9,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Утилиты */
+/* Utilities */
 ul {
   display: block;
   padding: 0;
@@ -67,7 +67,10 @@ title {
   font-size: 34px;
   font-weight: 700;
 }
-
+@media screen and (max-width: 920px) {
+  title {
+    font-size: 24px;
+  } }
 .upper-side {
   display: flex;
   justify-content: space-between;
@@ -75,11 +78,13 @@ title {
 
   margin-bottom: 24px;
 }
+
 .input-container {
   width: 430px;
   display: flex;
   justify-content: space-between;
 }
+
 
 input[type="color"] {
   width: 54px;
@@ -90,6 +95,7 @@ input[type="color"] {
 
   border-radius: 6px;
 }
+
 
 #input {
   max-width: 200px;
@@ -103,6 +109,11 @@ input[type="color"] {
   border-radius: 6px;
   background-color: #eff0f6;
 }
+@media screen and (max-width: 920px) {
+  #input {
+    max-width: 150px;
+  } }
+
 
 #input::placeholder {
   margin-top: auto;
@@ -130,6 +141,11 @@ input[type="color"] {
   font-weight: 500;
 }
 
+@media screen and (max-width: 920px) {
+  .input-button {
+    margin: 0 14px;
+  } }
+
 .random-button {
   box-sizing: border-box;
   border: none;
@@ -147,13 +163,34 @@ input[type="color"] {
   font-size: 16px;
   font-weight: 600;
 }
+@media screen and (max-width: 920px) {
+  .random-button {
+    width: 120px;
+    font-size: 12px;
+  } }
 
+  @media screen and (max-width: 800px) {
+    .random-button {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    } }
 /* main */
 .main-schemes {
   display: flex;
   justify-content: space-between;
 
   margin-bottom: 46px;
+}
+
+@media screen and (max-width: 1170px) {
+  .main-schemes {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  
+    margin-bottom: 46px;
+  }
 }
 /* analogic colors */
 .analogic-colors {
@@ -164,6 +201,11 @@ input[type="color"] {
   height: 100%;
 }
 
+@media screen and (max-width: 1170px) {
+  .analogic-colors {
+  
+  }
+}
 .analogic-colors-title {
   margin-bottom: 32px;
   color: #4c4d50;
@@ -178,6 +220,13 @@ input[type="color"] {
   align-items: flex-start;
   justify-content: space-between;
 }
+@media screen and (max-width: 1170px) {
+  .analogic-scheme {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+}
 
 .analogic-color {
   display: flex;
@@ -191,7 +240,11 @@ input[type="color"] {
   height: 34px;
 
   border-radius: 20px;
-  /* background-color: #95c289; */
+}
+@media screen and (max-width: 1170px) {
+  .analogic-color {
+    min-width: 250px;
+} 
 }
 
 .analogic-color:last-of-type {
@@ -214,11 +267,17 @@ input[type="color"] {
   height: 100%;
 }
 
+
 .white-palette,
 .black-palette {
   display: block;
 }
-
+@media screen and (max-width: 1170px) {
+  .white-palette,
+  .black-palette {
+  margin-bottom: 20px;
+} 
+}
 .palette-title {
   margin-bottom: 24px;
 
@@ -231,7 +290,11 @@ input[type="color"] {
   display: flex;
   justify-content: space-between;
 }
-
+@media screen and (max-width: 870px) {
+  .swatches {
+    flex-wrap: wrap;
+} 
+}
 .swatch {
   display: flex;
   flex-direction: column;
@@ -251,6 +314,20 @@ input[type="color"] {
 
   border-radius: 6px;
 }
+@media screen and (max-width: 870px) {
+  .swatch {
+    width: calc(100%/4);
+    margin-right: 0px;
+    margin-bottom: 10px;
+} 
+.swatch-color {
+  width: 150px;
+} 
+}
+@media screen and (max-width: 680px) {
+  .swatch-color {
+    width: 100px;
+  } }
 
 .swatch-hex {
   color: #6e6e71;
@@ -265,7 +342,17 @@ input[type="color"] {
   display: flex;
   justify-content: space-between;
 }
-
+@media screen and (max-width: 1170px) {
+  .secondary-schemes {
+   flex-wrap: wrap;
+} 
+}
+@media screen and (max-width: 980px) {
+  .secondary-schemes {
+   align-items: center;
+   justify-content: center;
+} 
+}
 .secondary-scheme {
   position: relative;
   box-sizing: content-box;
@@ -276,7 +363,16 @@ input[type="color"] {
 
   border-radius: 12px;
 }
-
+@media screen and (max-width: 1170px) {
+  .secondary-scheme {
+   margin-bottom: 20px;
+} 
+}
+@media screen and (max-width: 980px) {
+  .secondary-scheme {
+    width:500px;
+} 
+}
 .secondary-title {
   display: block;
   margin-bottom: 8px;
@@ -334,13 +430,17 @@ input[type="color"] {
   align-items: flex-start;
   justify-content: space-between;
 }
-
+@media screen and (max-width: 1170px) {
+  .random-colors {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} }
 .random-colors-title {
   color: #030914;
   font-size: 14px;
   font-weight: 600;
 }
-
 .random-color-first,
 .random-color-second {
   width: 187px;
