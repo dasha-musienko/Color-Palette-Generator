@@ -22,7 +22,6 @@ ul {
   border: none;
   background: none;
   border-radius: 4px;
-  font-family: "Roboto", sans-serif;
   text-align: center;
   cursor: pointer;
 }
@@ -140,6 +139,10 @@ input[type="color"] {
   font-size: 20px;
   font-weight: 500;
 }
+.input-button:hover {
+  filter: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.30));
+}
+
 
 @media screen and (max-width: 920px) {
   .input-button {
@@ -162,6 +165,11 @@ input[type="color"] {
   color: #000;
   font-size: 16px;
   font-weight: 600;
+}
+
+.random-button:hover {
+  background-color: #000;
+  color: #fff;
 }
 @media screen and (max-width: 920px) {
   .random-button {
@@ -201,11 +209,6 @@ input[type="color"] {
   height: 100%;
 }
 
-@media screen and (max-width: 1170px) {
-  .analogic-colors {
-  
-  }
-}
 .analogic-colors-title {
   margin-bottom: 32px;
   color: #4c4d50;
@@ -240,6 +243,8 @@ input[type="color"] {
   height: 34px;
 
   border-radius: 20px;
+
+  cursor: pointer;
 }
 @media screen and (max-width: 1170px) {
   .analogic-color {
@@ -313,6 +318,8 @@ input[type="color"] {
   height: 70px;
 
   border-radius: 6px;
+
+  cursor: pointer;
 }
 @media screen and (max-width: 870px) {
   .swatch {
@@ -341,6 +348,8 @@ input[type="color"] {
 .secondary-schemes {
   display: flex;
   justify-content: space-between;
+
+ 
 }
 @media screen and (max-width: 1170px) {
   .secondary-schemes {
@@ -362,6 +371,8 @@ input[type="color"] {
   height: 98px;
 
   border-radius: 12px;
+  cursor: pointer;
+
 }
 @media screen and (max-width: 1170px) {
   .secondary-scheme {
@@ -377,10 +388,11 @@ input[type="color"] {
   display: block;
   margin-bottom: 8px;
 
-  color: #fff;
+  color: #000;
 
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: -0.5px;
 }
 
 .secondary-color-second {
@@ -388,12 +400,12 @@ input[type="color"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  width: 50%;
+  bottom: 10px;
+  left: 10px;
+  width: 45%;
   height: 72px;
 
-  border-radius: 12px 0px 0px 12px;
+  border-radius: 12px;
 
   text-align: center;
 }
@@ -403,12 +415,12 @@ input[type="color"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
-  width: 50%;
+  bottom: 10px;
+  right: 10px;
+  width: 45%;
   height: 72px;
 
-  border-radius: 0px 12px 12px 0px;
+  border-radius: 12px;
 
   text-align: center;
 }
@@ -451,6 +463,8 @@ input[type="color"] {
   background: #fff;
   box-shadow: 0px 19.300859451293945px 36.189109802246094px 0px
     rgba(89, 113, 99, 0.1);
+
+    cursor: pointer;
 }
 .random-color-first {
   margin-bottom: 8px;
@@ -469,4 +483,13 @@ input[type="color"] {
 
   font-size: 10px;
   font-weight: 400;
+}
+
+/* alert settings */
+.alertify-notifier.ajs-right .ajs-message.ajs-visible {
+  border-radius: 10px;
+}
+.alertify-notifier .ajs-message.ajs-success {
+  background: rgba(91,189,114,.95);
+  color: #fff;
 }
