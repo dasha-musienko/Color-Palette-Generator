@@ -20,6 +20,10 @@ pickedColorEl.addEventListener("input", colorPickHandler);
 textInputEl.addEventListener("input", textInputHandler);
 submitBtnEl.addEventListener("click", submitBtnElClickHandler);
 randomBtnEl.addEventListener("click", randomBtnElClickHandler);
+document.addEventListener('click', copiesPickedColors);
+
+
+
 
 function colorPickHandler(evt) {
   pickedColorHEX = evt.target.value;
@@ -167,7 +171,7 @@ function createsSplitComplementaryArr(color) {
 function createsTriadicMarkup(arr) {
   triadicEl.style.backgroundColor = arr[0];
   triadicEl.innerHTML = `
-      <span class="secondary-title ">Split Complementary</span>
+      <span class="secondary-title ">Triadic</span>
         <span class="secondary-title ">${arr[0]}</span>
         <div class="secondary-color-second" style="background-color: ${arr[1]}">
         <span class="secondary-thumb-title">${arr[1]}</span></div>
@@ -186,7 +190,7 @@ function createsTriadicArr(color) {
 function createsDoubleComplementaryMarkup(arr) {
   doubleComplementaryEl.style.backgroundColor = arr[0];
   doubleComplementaryEl.innerHTML = `
-      <span class="secondary-title ">Split Complementary</span>
+      <span class="secondary-title ">Double Complementary</span>
         <span class="secondary-title ">${arr[0]}</span>
         <div class="secondary-color-second" style="background-color: ${arr[1]}">
         <span class="secondary-thumb-title">${arr[1]}</span></div>
@@ -234,4 +238,106 @@ function randomBtnElClickHandler() {
   pickedColorEl.value = color;
 }
 
+function copiesPickedColors(event) {
+  copiesGradientColors (event)
+  copiesAnalogicColors (event)
+  copiessecondaryColors (event)
+  randomColorsSetMarkup (event)
+}
+
+function copiesGradientColors (e) {
+  const swatch = e.target.closest(".swatch-color")
+
+  if (!swatch) {
+    return
+  } else {
+    const RGBcolor = swatch.style.backgroundColor;
+    const RGBarray = RGBcolor.replaceAll(" ", "").slice(4, 15).split(",").map(el => +el)
+    const RGBobj = {
+      r: RGBarray[0],
+      g: RGBarray[1],
+      b: RGBarray[2],
+    }
+    const HEXcolor = Please.RGB_to_HEX(RGBobj)
+    let copyText = HEXcolor;
+      navigator.clipboard.writeText(HEXcolor);
+
+      setsCopyAlert ()
+
+  }
+}
+
+function copiesAnalogicColors (e) {
+  const swatch = e.target.closest(".analogic-color")
+
+  if (!swatch) {
+    return
+  } else {
+    const RGBcolor = swatch.style.backgroundColor;
+    const RGBarray = RGBcolor.replaceAll(" ", "").slice(4, 15).split(",").map(el => +el)
+    const RGBobj = {
+      r: RGBarray[0],
+      g: RGBarray[1],
+      b: RGBarray[2],
+    }
+    const HEXcolor = Please.RGB_to_HEX(RGBobj)
+    let copyText = HEXcolor;
+      navigator.clipboard.writeText(HEXcolor);
+
+      setsCopyAlert ()
+  }
+}
+
+function copiessecondaryColors (e) {
+  const swatch = e.target.closest(".secondary-color-second") || e.target.closest(".secondary-color-third") || e.target.closest(".secondary-scheme")
+
+
+  if (!swatch) {
+    return
+  } else {
+    const RGBcolor = swatch.style.backgroundColor;
+    const RGBarray = RGBcolor.replaceAll(" ", "").slice(4, 15).split(",").map(el => +el)
+    const RGBobj = {
+      r: RGBarray[0],
+      g: RGBarray[1],
+      b: RGBarray[2],
+    }
+    const HEXcolor = Please.RGB_to_HEX(RGBobj)
+    let copyText = HEXcolor;
+      navigator.clipboard.writeText(HEXcolor);
+
+      setsCopyAlert ()
+  }
+}
+
+function randomColorsSetMarkup (e) {
+  const swatch = e.target.closest(".random-color-first") || e.target.closest(".random-color-second");
+
+  if (!swatch) {
+    return
+  }
+
+  const RGBcolor = swatch.firstElementChild.style.backgroundColor
+    const RGBarray = RGBcolor.replaceAll(" ", "").slice(4, 15).split(",").map(el => +el)
+    const RGBobj = {
+      r: RGBarray[0],
+      g: RGBarray[1],
+      b: RGBarray[2],
+    }
+    const HEXcolor = Please.RGB_to_HEX(RGBobj)
+
+
+    createsDefaultMarkup(HEXcolor);
+  
+    pickedColorEl.value = HEXcolor;
+    textInputEl.value = HEXcolor;
+
+}
+
+function setsCopyAlert () {
+  alertify.set('notifier','position', 'top-right');
+  alertify.success('Color copied to clipboard!');
+}
 createsDefaultMarkup(randomColor);
+
+
