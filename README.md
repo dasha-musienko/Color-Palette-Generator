@@ -12,11 +12,11 @@
   <h2>🔗Link</h2>
   https://dasha-musienko.github.io/Color-Palette-Generator/
   <h2>👩‍💻Techologies and Tools</h2>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/js.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/please.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/alertify.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/html.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/css.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/figma.png"/>
-  <img align="left" height="70px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/vscode.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/js.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/please.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/alertify.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/html.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/css.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/figma.png"/>
+  <img align="left" height="60px" alt="Cover image" src="https://github.com/dasha-musienko/Color-Palette-Generator/blob/main/img/vscode.png"/>
   
