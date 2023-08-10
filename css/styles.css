@@ -138,8 +138,7 @@ input[type="color"] {
   font-size: 20px;
   font-weight: 500;
 }
-.input-button:hover,
-.input-button:focus {
+.input-button:hover {
   filter: drop-shadow(3px 3px 15px rgba(0, 0, 0, 0.3));
 }
 
